@@ -20,7 +20,7 @@ public class UserTests {
         Response response= getRandomUserData();
         Assert.assertEquals(response.statusCode(),200);
         String email=response.then().extract().path("email");
-        System.out.println(email);
+        System.out.println("User Email: "+email);
     }
 
     @Test
