@@ -29,7 +29,7 @@ public class UserTests {
         Assert.assertEquals(response.statusCode(),200);
         ArrayList<Integer> postIDs=response.then().extract().path("id");
         for (Integer id:postIDs) {
-            if(id>100 && id<1)
+            if(id>100 || id<1)
                 Assert.assertTrue(false,"Invalid Post ID exist");
         }
     }
